@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { View, ScrollView, Text, StyleSheet } from 'react-native'
 
 
@@ -8,10 +8,26 @@ import Avatar from './Avatar'
 import SocialButton from './SocialButton'
 import Button from './Button'
 
-export default class App extends Component {
+export default class App extends PureComponent {
+  scrollToSection(i, sections, event) {
+    const nextIndex = (i === sections.length - 1 ? 0 : i + 1)
+
+    const scrollY = nextIndex * window.innerHeight
+
+    this.scrollview.scrollTo({
+      y: scrollY,
+      animated: true
+    })
+  }
+
   render() {
     return (
-      <ScrollView style={styles.container}>
+      <ScrollView
+        ref={ref => this.scrollview = ref}
+        scrollEnabled={false}
+        scrollEventThrottle={16} // ~60 events per second
+        style={styles.container}
+      >
         {
           section_content.map((section, i, sections) =>
             <View style={styles.page}>
@@ -42,7 +58,7 @@ export default class App extends Component {
               <View style={styles.footer}>
                 <Button
                   title={section.button}
-                  onPress={() => console.log(i === sections.length - 1 ? 0 : i + 1)}
+                  onPress={this.scrollToSection.bind(this, i, sections)}
                 />
               </View>
             </View>
@@ -53,11 +69,12 @@ export default class App extends Component {
   }
 }
 
+
 const styles = StyleSheet.create({
   container: {
-    ...StyleSheet.absoluteFill,
-    // height: '100vh',
-    // width: '100vw'
+    // ...StyleSheet.absoluteFill,
+    height: '100vh',
+    width: '100vw'
   },
   page: {
     justifyContent: 'center',
