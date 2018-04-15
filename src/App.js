@@ -38,7 +38,7 @@ export default class App extends Component {
               <View style={styles.footer}>
                 <Button
                   title={section.button}
-                  onPress={() => console.log(section.button)}
+                  onPress={() => console.log(i === sections.length - 1 ? 0 : i + 1)}
                 />
               </View>
             </View>
@@ -84,14 +84,12 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
     height: '20%',
   },
   icons: {
     flexDirection: 'row',
     justifyContent: 'center',
-  },
-  button: {
-
   }
 })

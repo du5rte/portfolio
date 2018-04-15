@@ -8,13 +8,11 @@ export default class Button extends Component {
     const { title, ...props } = this.props
 
     return (
-      <TouchableOpacity {...props}>
         <View style={styles.container}>
           <Text style={styles.text}>
             {title}
           </Text>
         </View>
-      </TouchableOpacity>
     );
   }
 }
