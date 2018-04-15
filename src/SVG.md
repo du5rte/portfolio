@@ -28,8 +28,10 @@
 - paperjs.org/reference/pathitem/#unite-path
 -
 ## Animated.Svg
-- https://stackoverflow.com/questions/39094349/how-to-make-svg-animation-with-animated-in-react-native
 - https://medium.com/@ethantran/animating-svg-in-react-native-cf1907831608
+- https://stackoverflow.com/questions/39094349/how-to-make-svg-animation-with-animated-in-react-native
+- https://github.com/ethantran/react-native-examples
+- https://github.com/react-native-community/react-native-svg/issues/55
 
 ## Other utilities
 - https://www.diffchecker.com/diff

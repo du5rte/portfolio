@@ -11,8 +11,8 @@ export default function PathData(init) {
     return copy
   }
 
-  let areEqualPoints = ([a1, b1], [a2, b2]) =>
-    (a1 === a2) && (b1 === b2)
+  // let areEqualPoints = ([a1, b1], [a2, b2]) =>
+  //   (a1 === a2) && (b1 === b2)
 
   let trimZeros = (string, char) => {
     let l = string.length
@@ -35,32 +35,32 @@ export default function PathData(init) {
     return `${ command } ${ numbers.join(' ') }`
   }
 
-  let point = ({ command, params }, [prevX, prevY]) => {
-    switch(command) {
-      case 'm':
-      case 'M':
-        return [params[0], params[1]]
-      case 'l':
-      case 'L':
-        return [params[0], params[1]]
-      case 'H':
-        return [params[0], prevY]
-      case 'V':
-        return [prevX, params[0]]
-      case 'Z':
-        return null
-      case 'C':
-        return [params[4], params[5]]
-      case 'S':
-        return [params[2], params[3]]
-      case 'Q':
-        return [params[2], params[3]]
-      case 'T':
-        return [params[0], params[1]]
-      case 'A':
-        return [params[5], params[6]]
-    }
-  }
+  // let point = ({ command, params }, [prevX, prevY]) => {
+  //   switch(command) {
+  //     case 'm':
+  //     case 'M':
+  //       return [params[0], params[1]]
+  //     case 'l':
+  //     case 'L':
+  //       return [params[0], params[1]]
+  //     case 'H':
+  //       return [params[0], prevY]
+  //     case 'V':
+  //       return [prevX, params[0]]
+  //     case 'Z':
+  //       return null
+  //     case 'C':
+  //       return [params[4], params[5]]
+  //     case 'S':
+  //       return [params[2], params[3]]
+  //     case 'Q':
+  //       return [params[2], params[3]]
+  //     case 'T':
+  //       return [params[0], params[1]]
+  //     case 'A':
+  //       return [params[5], params[6]]
+  //   }
+  // }
 
   let verbosify = (keys, f) =>
     function(a) {
