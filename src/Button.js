@@ -8,11 +8,13 @@ export default class Button extends Component {
     const { title, ...props } = this.props
 
     return (
+      <TouchableOpacity {...props}>
         <View style={styles.container}>
           <Text selectable={false} style={styles.text}>
             {title}
           </Text>
         </View>
+      </TouchableOpacity>
     );
   }
 }
@@ -27,7 +29,8 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderStyle: 'solid',
     borderColor: charcoal,
-    borderRadius: 9999
+    borderRadius: 9999,
+    cursor: 'pointer'
   },
   text: {
     fontFamily: 'Montserrat',
