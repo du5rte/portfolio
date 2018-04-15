@@ -2,8 +2,8 @@
   "name": "du5rte.github.io",
   "version": "0.1.0",
   "private": true,
-  "description": "My personal website portfolio",
-  "homepage": "https://du5rte.com",
+  "description": "My Portfolio",
+  "homepage": "https://du5rte.com/portfolio",
   "author": "Duarte Monteiro <du5rtemonteiro@gmail.com> (https://du5rte.com/)",
   "repository": {
     "type": "git",
