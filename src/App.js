@@ -18,11 +18,15 @@ export default class App extends Component {
               {i === 0 ?
                 <View style={styles.header}>
                   <Avatar />
-                  <Text style={styles.title}>{section.title}</Text>
+                  <Text selectable={false} style={styles.title}>
+                    {section.title}
+                  </Text>
                 </View>
               :
                 <View style={styles.main}>
-                  <Text style={styles.title}>{section.title}</Text>
+                  <Text selectable={false} style={styles.title}>
+                    {section.title}
+                  </Text>
 
                   {i === sections.length - 1 &&
                     <View style={styles.icons}>

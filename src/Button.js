@@ -9,7 +9,7 @@ export default class Button extends Component {
 
     return (
         <View style={styles.container}>
-          <Text style={styles.text}>
+          <Text selectable={false} style={styles.text}>
             {title}
           </Text>
         </View>
