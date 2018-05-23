@@ -26,12 +26,26 @@
 ## Path Boolean Operations
 - stackoverflow.com/questions/39125355/javascript-svg-vector-path-around-brush-strokes-for-a-brush-selection-tool
 - paperjs.org/reference/pathitem/#unite-path
--
+
 ## Animated.Svg
 - https://medium.com/@ethantran/animating-svg-in-react-native-cf1907831608
 - https://stackoverflow.com/questions/39094349/how-to-make-svg-animation-with-animated-in-react-native
 - https://github.com/ethantran/react-native-examples
 - https://github.com/react-native-community/react-native-svg/issues/55
+
+## Device Orientation
+- https://24ways.org/2016/taking-device-orientation-for-a-spin/
+- https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Using_device_orientation_with_3D_transforms
+- https://github.com/mrdoob/three.js/blob/1ebf1d828e877d850725a668146d7f11f8dfb15c/examples/js/controls/DeviceOrientationControls.js
+- https://24ways.org/2016/taking-device-orientation-for-a-spin/
+http://w3c.github.io/deviceorientation/spec-source-orientation.html
+- https://www.sitepoint.com/using-device-orientation-html5/
+- https://threejs.org/examples/?q=devi#misc_controls_deviceorientation
+- https://github.com/mrdoob/three.js/blob/1ebf1d828e877d850725a668146d7f11f8dfb15c/examples/js/controls/DeviceOrientationControls.js
+- http://w3c.github.io/deviceorientation/spec-source-orientation.html
+- https://quaternions.online/
+- https://www.andre-gaschler.com/rotationconverter/
+
 
 ## Other utilities
 - https://www.diffchecker.com/diff
