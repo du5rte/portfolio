@@ -1,11 +1,8 @@
-import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import React from 'react'
 import Media from "react-media"
 
 import TextScrollerNavigation from './TextScrollerNavigation'
 import DotsScrollerNavigation from './DotsScrollerNavigation'
-
-import { section_content } from './data'
 
 const ResponsiveScrollerNavigation = ({ scroll }) => (
   <Media query={{ maxWidth: 480 }}>

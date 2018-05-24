@@ -10,15 +10,13 @@ function arrayByCount(count) {
   return result
 }
 
-// const easing = BezierEasing(0.50, 0.00, 0.50, 1.00)
-
 function bounceInterpolation(i) {
   return i > 1/2 ? Math.abs(i - 1) : i
 }
 
-function invertedBounceInterpolation(i) {
-  return i > 0.5 ? i - 0.5 : Math.abs(i - 0.5)
-}
+// function invertedBounceInterpolation(i) {
+//   return i > 0.5 ? i - 0.5 : Math.abs(i - 0.5)
+// }
 
 export default class DotsScrollerNavigation extends Component {
   static defaultProps = {

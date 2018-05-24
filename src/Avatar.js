@@ -7,7 +7,7 @@ import Svg, {
   G,
   Defs,
   ClipPath,
-  Text
+  // Text
 } from 'svgs'
 
 import PathData from './path-data'

@@ -1,26 +1,18 @@
-import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React from 'react'
+import { Text, StyleSheet } from 'react-native'
 import Media from 'react-media'
-
-import { Scroller } from 'react-skroll'
 
 import { primaryColor } from './colors'
 
-class Title extends Component {
-  render() {
-    const { style, children, ...props } = this.props
-
-    return (
-      <Text
-        selectable={false}
-        style={[styles.title, style]}
-        {...props}
-      >
-        {children}
-      </Text>
-    );
-  }
-}
+const Title = ({ style, children, ...props }) => (
+  <Text
+    selectable={false}
+    style={[styles.title, style]}
+    {...props}
+  >
+    {children}
+  </Text>
+)
 
 const styles = StyleSheet.create({
   title: {
