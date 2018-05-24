@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 
-import { transparent, white, charcoal } from './colors'
+import { primaryColor } from './colors'
 
 export default class Button extends Component {
   render() {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     paddingRight: 16,
     borderWidth: 3,
     borderStyle: 'solid',
-    borderColor: charcoal,
+    borderColor: primaryColor,
     borderRadius: 9999,
     cursor: 'pointer'
   },
@@ -37,6 +37,6 @@ const styles = StyleSheet.create({
     fontSize: '2.25vh',
     fontWeight: '700',
     textAlign: 'center',
-    color: charcoal
+    color: primaryColor
   }
 })

@@ -1,17 +1,21 @@
 export const section_content = [
   {
+    uid: "Home",
     title: " Hello, \n I’m Duarte ",
     button: "What I do?"
   },
   {
+    uid: "What I do",
     title: " I design and code \n JavaScript ",
     button: "My approach?"
   },
   {
+    uid: "My Approach",
     title: " I like making cool \n apps ",
     button: "More"
   },
   {
+    uid: "Contact",
     title: "Get in touch",
     button: "Back to Top"
   }

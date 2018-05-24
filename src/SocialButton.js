@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { TouchableWithoutFeedback, Animated, Linking } from 'react-native'
+import Media from 'react-media'
 
-import { transparent, white, charcoal } from './colors'
+import { secondaryColor, primaryBackground, primaryColor } from './colors'
 
 // https://webpack.js.org/concepts/loaders/#inline
 // import extractProps from 'react-native-svg/lib/extract/extractProps';
 // import extractBrush from 'react-native-svg/lib/extract/extractBrush';
 
-export default class SocialButton extends Component {
+class SocialButton extends Component {
   static defaultProps = {
     height: '10vh'
   }
@@ -20,12 +21,12 @@ export default class SocialButton extends Component {
     this.animateState.addListener(() => {
       const backgroundColor = this.animateState.interpolate({
         inputRange: [0, 1],
-        outputRange: [transparent, props.social.color],
+        outputRange: [secondaryColor, props.social.color],
       })
 
       const foregroundColor = this.animateState.interpolate({
         inputRange: [0, 1],
-        outputRange: [charcoal, white],
+        outputRange: [primaryColor, primaryBackground],
       })
 
       const scale = this.animateState.interpolate({
@@ -68,10 +69,10 @@ export default class SocialButton extends Component {
   render() {
     const { social, ...props } = this.props
 
-    const { id, title, color, path, url } = social
+    const { title, path, url } = social
 
-    const backgroundColor = transparent
-    const foregroundColor = charcoal
+    const backgroundColor = secondaryColor
+    const foregroundColor = primaryColor
 
     const border = 24
     const height = 96 + border
@@ -126,3 +127,17 @@ const styles = {
     margin: 2
   }
 }
+
+const ResponsiveSocialButton = (props) => (
+  <Media query={{ maxWidth: 480 }}>
+    {matches =>
+      matches ? (
+        <SocialButton height="15vw" {...props} />
+      ) : (
+        <SocialButton height="10vh" {...props} />
+      )
+    }
+  </Media>
+)
+
+export default ResponsiveSocialButton
