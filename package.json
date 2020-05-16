@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "My Portfolio",
   "homepage": "http://du5rte.com",
@@ -21,19 +21,31 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react": "^16.3.2",
-    "react-dom": "^16.3.1",
-    "react-media": "^1.8.0",
-    "react-native-web": "^0.5.4",
-    "react-scripts": "1.1.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-media": "^1.10.0",
+    "react-native-web": "^0.12.2",
+    "react-scripts": "3.4.1",
     "react-skroll": "^0.5.1",
-    "svgs": "^3.2.1",
-    "three": "^0.92.0"
+    "svgs": "^4.1.1",
+    "three": "^0.116.1"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^2.2.0"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
