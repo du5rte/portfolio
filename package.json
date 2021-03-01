@@ -28,7 +28,7 @@
     "react-scripts": "3.4.1",
     "react-skroll": "^0.5.1",
     "svgs": "^4.1.1",
-    "three": "^0.116.1"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
